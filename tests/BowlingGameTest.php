@@ -111,7 +111,7 @@ class BowlingGameTest extends TestCase
     }
 
     /** @test */
-    function it_scores_a_game_with_not_spares_or_strikes()
+    function it_scores_a_game_without_spares_or_strikes()
     {
         $game = new BowlingGame();
 
