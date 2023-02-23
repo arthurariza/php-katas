@@ -23,6 +23,7 @@ class PrimeFactorsTest extends TestCase
     }
 
     /**
+     * @testdox The prime factors of $integer are $result
      * @dataProvider factorsProvider
      */
     public function test_prime_factors(int $integer, array $result)
