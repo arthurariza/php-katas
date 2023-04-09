@@ -1,7 +1,7 @@
 <?php
 
 
-use App\RomanNumerals;
+use Katas\RomanNumerals;
 use PHPUnit\Framework\TestCase;
 
 class RomanNumeralsTests extends TestCase

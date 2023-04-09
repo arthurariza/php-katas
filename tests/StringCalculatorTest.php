@@ -1,6 +1,6 @@
 <?php
 
-use App\StringCalculator;
+use Katas\StringCalculator;
 use PHPUnit\Framework\TestCase;
 
 class StringCalculatorTest extends TestCase

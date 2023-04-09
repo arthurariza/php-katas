@@ -1,7 +1,7 @@
 <?php
 
 
-use App\BowlingGame;
+use Katas\BowlingGame;
 use PHPUnit\Framework\TestCase;
 
 class BowlingGameTest extends TestCase

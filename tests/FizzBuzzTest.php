@@ -1,6 +1,6 @@
 <?php
 
-use App\FizzBuzz;
+use Katas\FizzBuzz;
 use PHPUnit\Framework\TestCase;
 
 class FizzBuzzTest extends TestCase

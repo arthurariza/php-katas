@@ -1,6 +1,6 @@
 <?php
 
-use App\PrimeFactors;
+use Katas\PrimeFactors;
 use PHPUnit\Framework\TestCase;
 
 class PrimeFactorsTest extends TestCase
