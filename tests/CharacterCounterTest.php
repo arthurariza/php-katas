@@ -1,7 +1,7 @@
 <?php
 
 
-use Katas\CharacterCounter;
+use Katas\Io\CharacterCounter;
 use phpmock\phpunit\PHPMock;
 use PHPUnit\Framework\TestCase;
 
@@ -13,7 +13,7 @@ class CharacterCounterTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->readline = $this->getFunctionMock('Katas', "readline")
+        $this->readline = $this->getFunctionMock('Katas\Io', "readline")
                                ->expects($this->once())
                                ->with(CharacterCounter::PROMPT_MESSAGE);
     }

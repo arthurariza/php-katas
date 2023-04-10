@@ -1,6 +1,6 @@
 <?php
 
-namespace Katas;
+namespace Katas\Io;
 
 class CharacterCounter
 {
