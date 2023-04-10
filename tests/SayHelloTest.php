@@ -13,13 +13,15 @@ class SayHelloTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->readline = $this->getFunctionMock('Katas', "readline");
+        $this->readline = $this->getFunctionMock('Katas', "readline")
+                               ->expects($this->once())
+                               ->with(SayHello::PROMPT_MESSAGE);
     }
 
     /** @test */
     public function it_says_hello_to_brian(): void
     {
-        $this->readline->expects($this->once())->with("What is your name?")->willReturn("Brian");
+        $this->readline->willReturn("Brian");
 
         SayHello::hello();
 
@@ -29,7 +31,7 @@ class SayHelloTest extends TestCase
     /** @test */
     public function it_says_hello_to_john(): void
     {
-        $this->readline->expects($this->once())->with("What is your name?")->willReturn("John");
+        $this->readline->willReturn("John");
 
         SayHello::hello();
 
@@ -39,7 +41,7 @@ class SayHelloTest extends TestCase
     /** @test */
     public function it_capitalizes_the_name(): void
     {
-        $this->readline->expects($this->once())->with("What is your name?")->willReturn("jane");
+        $this->readline->willReturn("jane");
 
         SayHello::hello();
 
@@ -49,7 +51,7 @@ class SayHelloTest extends TestCase
     /** @test */
     public function it_trims_the_name(): void
     {
-        $this->readline->expects($this->once())->with("What is your name?")->willReturn("Doe    ");
+        $this->readline->willReturn("Doe    ");
 
         SayHello::hello();
 
@@ -59,7 +61,7 @@ class SayHelloTest extends TestCase
     /** @test */
     public function it_asks_for_a_valid_name_if_none_is_given(): void
     {
-        $this->readline->expects($this->once())->with("What is your name?")->willReturn("");
+        $this->readline->willReturn("");
 
         SayHello::hello();
 
